@@ -64,5 +64,5 @@ $(document).ready(function(){
 });
 function viderChamps(){
     document.getElementById('message').innerHTML = "Votre formulaire a été validé";
-    // Je comptais utiliser ça pour effacer le contenu des champs mais je n'y suis pas arrivé : ("#FormEval").empty();
+    document.getElementById('FormEval').reset();
 }
