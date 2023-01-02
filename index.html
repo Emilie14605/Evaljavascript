@@ -22,8 +22,9 @@
         <input type="email" name="email" id="email" placeholder="*****@gmail.com" onblur="verifierEmail(this)";>
         <label for="tel">Téléphone :</label>
         <input type="tel" name="tel" id="tel" placeholder="00 00 00 00 00" onblur="verifierTel(this);">
-        <button type="submit">Valider</button>
+        <button type="submit" onclick="viderChamps();">Valider</button>
     </form>
+    <div id="message"></div>
     <div id="infomdp"></div>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>

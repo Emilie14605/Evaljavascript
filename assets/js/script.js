@@ -51,12 +51,14 @@ $(document).ready(function(){
         })
         .done(function(response){
             alert(response);
-            return false;
         })
         .fail(function(error){
             alert('Le formulaire a rencontré une erreur');
-            return false;
         });
         return false;
     });
-})
+});
+function viderChamps(){
+    $('#FormEval').empty();
+    document.getElementById('message').innerHTML = "Votre formulaire a été validé";
+}
