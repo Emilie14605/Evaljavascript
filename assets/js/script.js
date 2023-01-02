@@ -28,16 +28,20 @@ function verifierTel(element){
     let regex = /^[0-9]{10,10}$/i;
     if(regex.test(element.value)){
         element.style.background = 'lightgreen';
+        document.getElementById('infotel').innerHTML = "Votre numéro de téléphone est valide"
     } else {
         element.style.background = 'orange';
+        document.getElementById('infotel').innerHTML = "Votre numéro de téléphone n'est pas valide"
     }
 }
 function verifierEmail(element){
     let regex = /^[a-z0-9.-_]{4,}@+[a-z0-9.-_]{4,}.+[a-z]{2,}$/i;
     if(regex.test(element.value)){
         element.style.background = 'lightgreen';
+        document.getElementById('infoemail').innerHTML = "Votre adresse mail est valide"
     } else {
         element.style.background = 'orange';
+        document.getElementById('infoemail').innerHTML = "Votre adresse mail n'est pas valide"
     }
 }
 $(document).ready(function(){
@@ -59,6 +63,6 @@ $(document).ready(function(){
     });
 });
 function viderChamps(){
-    $('#FormEval').empty();
     document.getElementById('message').innerHTML = "Votre formulaire a été validé";
+    // Je comptais utiliser ça pour effacer le contenu des champs mais je n'y suis pas arrivé : ("#FormEval").empty();
 }
