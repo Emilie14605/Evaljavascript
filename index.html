@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulaire evaluation</title>
+</head>
+<body>
+    <form name="FormEval" id="FormEval" method="POST" action="">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" placeholder="Nom">
+        <label for="prenom">Prenom :</label>
+        <input type="text" name="prenom" id="prenom" placeholder="Prenom">
+        <label for="MDP">Mot de passe :</label>
+        <input type="password" name="MDP" id="MDP">
+        <label for="MDPR">Répéter votre mot de passe :</label>
+        <input type="password" name="MDPR" id="MDPR" onblur="verifierMotDePasse();">
+        <button type="button" onclick="genereMotDePasse();">Générer un mot de passe</button>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="*****@gmail.com" onblur="verifierEmail(this)";>
+        <label for="tel">Téléphone :</label>
+        <input type="tel" name="tel" id="tel" placeholder="00 00 00 00 00" onblur="verifierTel(this);">
+        <button type="submit">Valider</button>
+    </form>
+    <div id="infomdp"></div>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
