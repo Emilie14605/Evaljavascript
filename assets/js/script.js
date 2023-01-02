@@ -1,3 +1,4 @@
+// Fonction pour générer un mot de passe
 function genereMotDePasse(){
     let char = '0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBNù*^$¨£%µéàçè';
     let taille = Math.floor(Math.random()*8);
@@ -9,6 +10,7 @@ function genereMotDePasse(){
     document.getElementById('MDP').value = Mdp;
     document.getElementById('MDPR').value = Mdp;
 }
+// Fonction pour vérifier le mot de passe
 function verifierMotDePasse(){
     let MDP = document.getElementById('MDP');
     let MDPR = document.getElementById('MDPR');
@@ -24,6 +26,7 @@ function verifierMotDePasse(){
         return false;
     }
 }
+//Fonction pour vérifier le numéro de téléphone
 function verifierTel(element){
     let regex = /^[0-9]{10,10}$/i;
     if(regex.test(element.value)){
@@ -34,6 +37,7 @@ function verifierTel(element){
         document.getElementById('infotel').innerHTML = "Votre numéro de téléphone n'est pas valide"
     }
 }
+// Fonction pour vérifier l'adresse mail
 function verifierEmail(element){
     let regex = /^[a-z0-9.-_]{4,}@+[a-z0-9.-_]{4,}.+[a-z]{2,}$/i;
     if(regex.test(element.value)){
@@ -44,6 +48,7 @@ function verifierEmail(element){
         document.getElementById('infoemail').innerHTML = "Votre adresse mail n'est pas valide"
     }
 }
+// Jquery pour envoyer les données du formulaire en Ajax 
 $(document).ready(function(){
     $('#FormEval').on('submit',function(){
         let form = $('#FormEval').serialize();
@@ -62,6 +67,7 @@ $(document).ready(function(){
         return false;
     });
 });
+// Fonction pour vider les champs du formulaire et afficher un message après avoir soumis le formulaire
 function viderChamps(){
     document.getElementById('message').innerHTML = "Votre formulaire a été validé";
     document.getElementById('FormEval').reset();
